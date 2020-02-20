@@ -5,12 +5,13 @@ import br.com.springboot.app.model.Person;
 import br.com.springboot.app.model.dto.PersonDTO;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping(path = "/api/people")
+@RequestMapping(path = "/api/people", produces = MediaType.APPLICATION_JSON_VALUE)
 public class PersonResource {
 
     private final PersonService personService;
